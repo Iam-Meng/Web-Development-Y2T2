@@ -21,6 +21,7 @@ const SHOPPING_CART = [
 function getCartTotalAmount() {
   let result = 0;
   // Write your code here
+  if (!SHOPPING_CART.length) return result;
   let price;
   for (let i = 0; i < SHOPPING_CART.length; i++) {
     for (let j = 0; j < PRODUCTS.length; j++) {
