@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/0 - START CODE/CSS/edit.css">
+</head>
+
+<body>
+    <!-- nav -->
+    <nav>
+        <div class="logo">
+            <img src="/0 - START CODE/img/logo.webp" alt="logo">
+        </div>
+        <h3>Quiz App</h3>
+        <div class="nav-links">
+            <a href="/0 - START CODE/view/play/play.html">Play</a>
+            <a href="/0 - START CODE/view/edit/edit.html">Edit Quiz</a>
+        </div>
+    </nav>
+    <!-- main -->
+    <div class="container">
+        <div class="top-bar">
+            <button class="add-btn">+ Add Question</button>
+        </div>
+        <div class="questions">
+            <div class="question-item">
+                <p>What does HTML stand for?</p>
+                <div class="actions">
+                    <button class="edit">📝</button>
+                    <button class="delete">🗑️</button>
+                </div>
+            </div>
+            <div class="question-item">
+                <p>What does CSS stand for?</p>
+                <div class="actions">
+                    <button class="edit">📝</button>
+                    <button class="delete">🗑️</button>
+                </div>
+            </div>
+            <div class="question-item">
+                <p>What does JS stand for?</p>
+                <div class="actions">
+                    <button class="edit">📝</button>
+                    <button class="delete">🗑️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal hidden">
+        <div class="modal-box">
+            <header>Create new question</header>
+            <label>Title</label>
+            <input type="text" placeholder="Question title">
+            <label>Answers</label>
+            <div class="answer-group">
+                <div class="answer-item">
+                    <input type="text" placeholder="Answer A">
+                    <button class="select-correct">✔</button>
+                </div>
+                <div class="answer-item">
+                    <input type="text" placeholder="Answer B">
+                    <button class="select-correct">✔</button>
+                </div>
+                <div class="answer-item">
+                    <input type="text" placeholder="Answer C">
+                    <button class="select-correct">✔</button>
+                </div>
+                <div class="answer-item">
+                    <input type="text" placeholder="Answer D">
+                    <button class="select-correct">✔</button>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="cancel">Cancel</button>
+                <button class="save">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="edit.js"></script>
+</body>
+
+</html>
