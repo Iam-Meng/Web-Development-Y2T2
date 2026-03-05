@@ -10,10 +10,12 @@ function App() {
   /* You will need some function to handle the key pressed and button events */
   const onA = (event) => {
     setNumA(event.target.value);
+    setIsWarning(false);
   };
 
   const onB = (event) => {
     setNumB(event.target.value);
+    setIsWarning(false);
   };
 
   const isNumber = (str) => {
@@ -24,6 +26,7 @@ function App() {
     if (isNumber(numA) && isNumber(numB)) {
       const sum = parseFloat(numA) + parseFloat(numB);
       setResult(sum);
+      setIsWarning(false);
     } else {
       setResult("Please enter valid numbers");
       setIsWarning(true);
@@ -43,7 +46,7 @@ function App() {
       <label>A + B =</label>
 
       {/* When Compute button is clicked, this input displays the sum of the 2 numbers, or the error message in RED */}
-      <input disabled value={result} style={{ color: isWarning ? "red" : "black" }} />
+      <input disabled value={result} style={{ color: isWarning ? "red" : "white" }} />
       <button onClick={onCompute}>Compute</button>
     </main>
   );
