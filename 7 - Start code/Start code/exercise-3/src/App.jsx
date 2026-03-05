@@ -10,12 +10,10 @@ function App() {
   /* You will need some function to handle the key pressed and button events */
   const onA = (event) => {
     setNumA(event.target.value);
-    setIsWarning(false);
   };
 
   const onB = (event) => {
     setNumB(event.target.value);
-    setIsWarning(false);
   };
 
   const isNumber = (str) => {
@@ -26,7 +24,6 @@ function App() {
     if (isNumber(numA) && isNumber(numB)) {
       const sum = parseFloat(numA) + parseFloat(numB);
       setResult(sum);
-      setIsWarning(false);
     } else {
       setResult("Please enter valid numbers");
       setIsWarning(true);
@@ -38,10 +35,10 @@ function App() {
       <h1>Calculator</h1>
 
       <label>A =</label>
-      <input value={numA} onKeyUp={onA} />
+      <input onChange={numA} onKeyUp={onA} />
 
       <label>B =</label>
-      <input value={numB} onKeyUp={onB} />
+      <input onChange={numB} onKeyUp={onB} />
 
       <label>A + B =</label>
 
