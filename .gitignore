@@ -1,7 +1,8 @@
-*modules/
+node_modules/
 *.log
 *.tmp
 *.bak
 package-lock.json
 package.json
 vite.config.js
+.gitignore
